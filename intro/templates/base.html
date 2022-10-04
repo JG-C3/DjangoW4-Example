@@ -12,9 +12,11 @@
     }
 
     .header a {
+      display: inline-block;
       border: 1px solid;
       border-radius: 15px;
       padding: 5px 10px;
+      margin: 3px 0;
       text-decoration: none;
     }
 
@@ -24,21 +26,26 @@
     }
 
     .header a:nth-of-type(2) {
+      color: OrangeRed;
+      background-color: rgb(255, 233, 226);
+    }
+
+    .header a:nth-of-type(3) {
       color: orange;
       background-color: rgb(255, 245, 227);
     }
 
-    .header a:nth-of-type(3) {
+    .header a:nth-of-type(4) {
       color: green;
       background-color: rgb(229, 255, 229);
     }
 
-    .header a:nth-of-type(4) {
+    .header a:nth-of-type(5) {
       color: blue;
       background-color: rgb(228, 228, 255);
     }
-
-    .header a:nth-of-type(5) {
+    
+    .header a:nth-of-type(6) {
       color: purple;
       background-color: rgb(255, 232, 255);
     }
@@ -49,6 +56,7 @@
 </head>
 <body>
   <div class="header">
+    <a href="{% url 'functions:index' %}">홈</a>
     <a href="{% url 'functions:image' %}">이미지</a>
     <a href="{% url 'functions:lucky' %}">행운의 숫자</a>
     <a href="{% url 'functions:birthday' %}">생일</a>

@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block body %}
-  <a href="{% url 'functions:ranking' %}">돌아가기</a>
-  <h1>{{name}}</h1>
-  <p>
-    {{name}}은(는) {{detail}}입니다.
-  </p>
+<h1>{{name}}</h1>
+<p>
+  '{{name}}'은(는) {{detail}}입니다.
+</p>
+<a href="{% url 'functions:ranking' %}">돌아가기</a>
 {% endblock %}

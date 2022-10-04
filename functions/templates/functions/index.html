@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
 
+{% block head %}
+  <style>
+    li {
+      margin: 10px 0;
+    }
+  </style>
+{% endblock %}
+
 {% block body %}
   <h1 style="background-color: pink;">메인 페이지</h1>
-
-  <a href=""></a>
+  <h2>오늘의 목표</h2>
+  <ul>
+    <li>Django에서 여러개의 앱을 사용하는 방법에 대해 알아봅시다.</li>
+    <li>View의 기능에 대해 알아봅시다.</li>
+    <li>Django의 Template 문법에 대해 알아봅시다.</li>
+  </ul>
 {% endblock %}
