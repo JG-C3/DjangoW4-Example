@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <style>
+    img {
+      width: 200px;
+      margin: 20px;
+      border: 5px solid gold;
+      padding: 20px;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <img src="{% static 'image/walnut.jpg' %}" alt="">
+{% endblock %}

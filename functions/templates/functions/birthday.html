@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>생일 계산기</h1>
+  <p>오늘은 {{year}}년 {{month}}월 {{day}}일입니다.</p>
+  {% if d_day == 0 %}
+    <p>오늘은 나의 생일입니다.</p>
+  {% else %}
+    <p>나의 생일은 {{b_month}}월 {{b_day}}일입니다.</p>
+    <p>생일까지 {{d_day}}일 남았습니다.</p>
+  {% endif %}
+{% endblock %}

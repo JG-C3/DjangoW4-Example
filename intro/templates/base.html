@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .header {
+      margin: 15px;
+    }
+
+    .header a {
+      border: 1px solid;
+      border-radius: 15px;
+      padding: 5px 10px;
+      text-decoration: none;
+    }
+
+    .header a:nth-of-type(1) {
+      color: red;
+      background-color: rgb(255, 230, 230);
+    }
+
+    .header a:nth-of-type(2) {
+      color: orange;
+      background-color: rgb(255, 245, 227);
+    }
+
+    .header a:nth-of-type(3) {
+      color: green;
+      background-color: rgb(229, 255, 229);
+    }
+
+    .header a:nth-of-type(4) {
+      color: blue;
+      background-color: rgb(228, 228, 255);
+    }
+
+    .header a:nth-of-type(5) {
+      color: purple;
+      background-color: rgb(255, 232, 255);
+    }
+  </style>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block head %}
+  {% endblock %}
+</head>
+<body>
+  <div class="header">
+    <a href="{% url 'functions:image' %}">이미지</a>
+    <a href="{% url 'functions:lucky' %}">행운의 숫자</a>
+    <a href="{% url 'functions:birthday' %}">생일</a>
+    <a href="{% url 'functions:ranking' %}">프로그래밍 언어 순위</a>
+    <a href="{% url 'games:rsp' %}">가위바위보 게임</a>
+  </div>
+
+  {% block body %}
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <style>
+    table {
+      border: 2px solid;
+    }
+    th {
+      border: 1px dashed;
+      padding: 5px 10px;
+    }
+    td {
+      border: 1px dotted;
+      padding: 3px;
+      text-align: center;
+    }
+  </style>
+{% endblock %}
+
+
+{% block body %}
+  <table>
+    <thead>
+      <tr>
+        <th>순위</th>
+        <th>프로그래밍 언어</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for language in languages %}
+      <tr>
+        <td>{{forloop.counter}}위</td>
+        <td><a href="{% url 'functions:language' language %}">{{language}}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
