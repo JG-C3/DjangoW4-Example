@@ -40,6 +40,7 @@ def result(request, pick):
 
     context = {
         "pick": pick,
+        # [미션] 'com'키의 value값을 'com'변수값으로 만들기
         "com": com,
         "result": result,
         "win": win,
