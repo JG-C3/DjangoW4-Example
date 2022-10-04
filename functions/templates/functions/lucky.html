@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 
+{% block head %}
+  <style>
+    
+  </style>
+{% endblock %}
+
 {% block body %}
   <h1>
+    <!-- [코드 추가] View에서 전달한 값 보여주기 -->
     오늘의 행운의 숫자는 {{number}}입니다.
   </h1>
 {% endblock %}

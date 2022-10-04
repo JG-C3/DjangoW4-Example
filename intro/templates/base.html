@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- 내부 스타일 시트 적용 -->
   <style>
     .header {
       margin: 15px;
@@ -50,12 +51,15 @@
       background-color: rgb(255, 232, 255);
     }
   </style>
+  <!-- 외부 스타일 시트 적용 -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   {% block head %}
   {% endblock %}
 </head>
 <body>
+  <!-- 공통으로 사용하는 부분 -->
   <div class="header">
+    <!-- [코드 수정] URL 별칭 사용하기 -->
     <a href="{% url 'functions:index' %}">홈</a>
     <a href="{% url 'functions:image' %}">이미지</a>
     <a href="{% url 'functions:lucky' %}">행운의 숫자</a>

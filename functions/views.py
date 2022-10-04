@@ -1,5 +1,7 @@
 from django.shortcuts import render
+# [코드 작성] 'random'모듈 가져오기
 from random import *
+# [코드 작성] 'datetime'모듈 가져오기
 import datetime
 
 # Create your views here.
@@ -10,23 +12,31 @@ def image(request):
     return render(request, "functions/image.html")
 
 def lucky(request):
+    # [코드 작성] number 변수에 1부터 100까지의 정수 중 랜덤한 숫자 저장하기
     number = randint(1, 100)
+
+    # 'context' 딕셔너리의 key와 value값으로 HTML에 전달하고 싶은 값을 추가
     context = {
         "number": number,
     }
 
+    # [코드 추가] 'context'값을 HTML로 넘기기
     return render(request, "functions/lucky.html", context)
 
 def birthday(request):
+    # [코드 작성] 'datetime'모듈 가져오기
     today = datetime.date.today()
 
+    # [코드 작성] 'year', 'month', 'day' 변수에 각각 오늘 날짜 정보 저장하기
     year = today.year
     month = today.month
     day = today.day
 
+    # [코드 수정] 내 생일의 월일을 정수로 저장하기
     b_month = 1
     b_day = 1
 
+    # 가장 빠른 생일의 연도 계산
     if (b_month > month):
         b_year = year
     elif (b_month == month) and (b_day >= day):
@@ -34,8 +44,10 @@ def birthday(request):
     else:
         b_year = year + 1
 
+    # 'datetime'모듈의 'date' 클래스를 이용하여 생일을 datetime 형식으로 만들기
     birthday = datetime.date(b_year, b_month, b_day)
 
+    # 나의 생일까지 남은 요일을 계산
     d_day = birthday - today
     d_day = d_day.days
 
@@ -84,6 +96,7 @@ def language(request, name):
         "PHP": "동적 웹 페이지를 쉽고 빠르게 만들 수 있도록 해주는 프로그래밍 언어",
     }
 
+    # [코드 작성] languages 딕셔너리에서 'functions'앱의 'urls.py'에서 전달받은 인자값 '<str:name>'의 인수값 'name'을 key값으로 하는 value값 가져오기
     detail = languages[name]
 
     context = {

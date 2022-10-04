@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'functions',
+    # [코드 작성] 'games'앱 등록
     'games',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,6 +57,7 @@ ROOT_URLCONF = 'intro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # [코드 추가] TEMPLATES의 기본 경로 변경해주기
         'DIRS': [BASE_DIR / 'intro' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -118,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+# [코드 작성] STATICFILES_DIRS를 설정하여 개발 단계에서 사용하는 정적 파일의 경로 변경해주기
 STATICFILES_DIRS  =  [BASE_DIR / "static"]
 
 # Default primary key field type

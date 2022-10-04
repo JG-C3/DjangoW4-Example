@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('functions.urls')),
+    # [코드 작성] 'games'앱의 'urls.py' 포함시키기
     path('games/', include('games.urls')),
 ]
