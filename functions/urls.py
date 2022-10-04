@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-# [코드 작성] 'games'앱 이름 설정하기
+# [코드 작성] 'functions'앱 이름 설정하기
 app_name = "functions"
 
 # 'path'의 'name' 속성으로 url의 별칭을 지정하기
